@@ -90,7 +90,7 @@ export const ScrapePage = () => {
                 <Input
                   type="number"
                   min={1}
-                  max={500}
+                  max={200}
                   value={maxResults}
                   onChange={(e) => setMaxResults(Number(e.target.value))}
                   className="w-20 h-7 text-right px-2 py-0 border-none bg-transparent focus-visible:ring-0 font-mono"
