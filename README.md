@@ -1,82 +1,84 @@
-# Free Google Maps Scraper Dashboard
+# 🚀 FREE Google Maps Scraper Dashboard - 5-Minute Setup Guide
 
-An open-source dashboard for scraping Google Maps data using Apify. This project provides a user-friendly interface to run scrapes, view history, and download results (CSV/JSON).
+Deploy your own commercial-grade Google Maps scraper in under 5 minutes. No coding required, completely free to start, and runs on your own infrastructure or local machine.
 
-## Features
+## 📋 What You'll Get
 
--   **Scrape Google Maps**: Extract business details like names, addresses, ratings, reviews, and categories.
--   **Run History**: View your past scraping jobs, sorted by latest.
--   **Dynamic Previews**: View a sample of your data with columns automatically mapped to the dataset schema.
--   **Export Data**: Direct download links for CSV and JSON formats.
--   **Configurable Limits**: Set the maximum number of results to scrape per run.
+-   ✅ **Unlimited Scraping** - Extract thousands of leads directly from Google Maps
+-   ✅ **Complete Business Data** - Emails, phone numbers, websites, ratings, and reviews
+-   ✅ **Real-time Dashboard** - Monitor your scraping jobs live
+-   ✅ **History Management** - Keep track of all your past runs and datasets
+-   ✅ **One-Click Exports** - Download clean CSV/JSON files instantly for Excel or Google Sheets
+-   ✅ **Smart Limits** - Control exactly how many results you scrape to manage credits
+-   ✅ **Completely Free** - Uses the free-tier compatible `free-basic-google-maps-scraper` actor
 
-## Getting Started
+---
 
-### Prerequisites
+## ⚡ Quick Start Guide
 
--   Node.js & npm/bun installed.
--   An [Apify Account](https://apify.com/).
+You can have this running on your local machine in just a few simple steps.
 
-### Installation
+### 1. Prerequisites
 
-1.  **Clone the repository**
+-   **Node.js** (v18+)
+-   An **[Apify Account](https://apify.com/)** (The free tier is sufficient!)
 
-    ```bash
-    git clone <YOUR_REPO_URL>
-    cd free-google-maps-scraper
-    ```
+### 2. Installation
 
-2.  **Install dependencies**
+Clone this repository and install the dependencies:
 
-    ```bash
-    npm install
-    # or
-    bun install
-    ```
+```bash
+git clone <YOUR_REPO_URL>
+cd free-google-maps-scraper
+npm install
+# or if you use bun
+bun install
+```
 
-3.  **Configure Environment**
+### 3. Configuration
 
-    Create a `.env` file in the root directory (copy from `.env.example`):
+We've made setup extremely easy. Just copy the example environment file:
 
-    ```bash
-    cp .env.example .env
-    ```
+```bash
+cp .env.example .env
+```
 
-    Open `.env` and add your Apify API Token:
+Now open `.env` and paste your Apify API Token:
 
-    ```env
-    VITE_APIFY_TOKEN=your_apify_api_token_here
-    VITE_APIFY_ACTOR_ID=automateitplease~free-basic-google-maps-scraper
-    ```
+```env
+# Get this from https://console.apify.com/account/integrations
+VITE_APIFY_TOKEN=your_apify_api_token_here
 
-    > **Note:** By default, this project is configured to use the `automateitplease~free-basic-google-maps-scraper` actor, which is free to use. You can change this ID if you wish to use a different compatible Google Maps scraper actor.
+# This is pre-configured for the best free scraper available
+VITE_APIFY_ACTOR_ID=automateitplease~free-basic-google-maps-scraper
+```
 
-4.  **Start the development server**
+### 4. Run It!
 
-    ```bash
-    npm run dev
-    # or
-    bun dev
-    ```
+Start your dashboard:
 
-## Usage
+```bash
+npm run dev
+```
 
-1.  Open the dashboard in your browser.
-2.  Enter your search queries (e.g., "Coffee shops in Seattle").
-3.  Set the **Max Results** limit.
-4.  Click **Start Scrape**.
-5.  Once running, you can monitor the status in the "History & Datasets" section.
-6.  When complete, click **Preview** to see the data or use the **Export** buttons to download.
+That's it! Visit `http://localhost:5173` (or the URL shown in your terminal) and start scraping.
 
-## Technologies
+---
 
--   [Vite](https://vitejs.dev/)
--   [React](https://reactjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Tailwind CSS](https://tailwindcss.com/)
--   [shadcn/ui](https://ui.shadcn.com/)
--   [Apify API](https://docs.apify.com/api/v2)
+## 🛠️ How It Works
 
-## License
+This dashboard connects directly to the powerful [Apify](https://apify.com/) platform using their API. 
 
-This project is open source and available under the MIT License.
+1.  **You Enter a Query**: "Gyms in London", "Plumbers in NYC", etc.
+2.  **We Dispatch the Job**: The dashboard triggers the `automateitplease~free-basic-google-maps-scraper` actor on Apify.
+3.  **You Watch & Download**: See the results stream in and download them when ready.
+
+Because it uses your own API key, **you have full control**. You can switch to other actors, manage your own proxies (if needed), and keep all your data private.
+
+## 🤝 Contributing
+
+We love open source! If you want to add features like visualizing data on a map, email integration, or more export formats, feel free to fork and submit a PR.
+
+## 📄 License
+
+MIT License - Free to use for personal and commercial projects.
